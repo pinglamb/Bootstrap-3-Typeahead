@@ -1,5 +1,5 @@
 /* =============================================================
- * bootstrap3-typeahead.js v3.0.3
+ * bootstrap3-typeahead.js v3.0.5
  * https://github.com/bassjobsen/Bootstrap-3-Typeahead
  * =============================================================
  * Original written by @mdo and @fat
@@ -392,8 +392,7 @@
     var $this = $(this);
     if ($this.data('typeahead')) return;
     var options = $this.data();
-    if options.minlength
-      options.minLength = options.minlength;
+    if(options.minlength != undefined) options.minLength = options.minlength;
     $this.typeahead(options);
   });
 

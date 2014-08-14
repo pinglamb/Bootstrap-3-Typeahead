@@ -391,7 +391,10 @@
   $(document).on('focus.typeahead.data-api', '[data-provide="typeahead"]', function (e) {
     var $this = $(this);
     if ($this.data('typeahead')) return;
-    $this.typeahead($this.data());
+    var options = $this.data();
+    if options.minlength
+      options.minLength = options.minlength;
+    $this.typeahead(options);
   });
 
 }(window.jQuery);
